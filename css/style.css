@@ -1,0 +1,219 @@
+:root {
+   --cyan: hsl(179, 62%, 43%);
+   --light-cyan: hsl(179, 50%, 58%);
+   --very-light-cyan: hsl(179, 50%, 78%);
+   --bright-yellow: hsl(71, 73%, 54%);
+
+   --light-gray: hsl(204, 43%, 93%);
+   --grayish-blue: hsl(218, 22%, 67%);
+   --white: #ffffff;
+   --shadow: 0px .1em .9em .1em rgba(0,0,0,0.1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   color: var(--grayish-blue);
+   box-sizing: border-box;
+}
+
+body {
+   min-height: 100vh;
+   background-color: var(--light-gray);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   text-rendering: optimizeSpeed;
+   font-family: 'Karla', sans-serif;
+   color: var(--white);
+}
+/*
+   MAIN SECTION
+*/
+.visually__hidden {
+   clip: rect(0 0 0 0);
+   clip-path: inset(50%);
+   height: 1px;
+   overflow: hidden;
+   position: absolute;
+   white-space: nowrap;
+   width: 1px;
+   }
+
+.main__container {
+   background-color: var(--white);
+   border-radius: .5em;
+   margin: 1.5em;
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr;
+   min-height: max-content;
+   box-shadow: 0px .1em .9em .1em rgba(0,0,0,0.1);
+}
+   /*
+      JOIN SECTION
+   */
+   .join__section {
+      padding: .75em 1.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   .section__title {
+      font-weight: 700;
+      font-size: 1.1em;
+      padding: .75em 0;
+      color: var(--white);
+   }
+
+   .community__title {
+      color: var(--cyan);
+   }
+
+   .sub__title {
+      color: var(--bright-yellow);
+      padding: .75em 0;
+      font-weight: 700;
+      font-size: .95em;
+   }
+
+   .description {
+      font-size: .75em;
+      line-height: 1.8em;
+      padding: .75em 0;
+   }
+   /*
+      SUBSCRIPTION SECTION
+   */
+   .subscription__section{
+      background-color: var(--cyan);
+      padding: .75em 1.5em;
+      display: flex;
+      flex-direction: column;
+   }
+   .price__container {
+      display: flex;
+      gap: .9em;
+      align-items: center;
+      padding: .75em 0;
+   }
+   .price__container :nth-child(1){
+      color: var(--white);
+      font-size: 1.8em;
+   }
+   .price__container :nth-child(2){
+      color: var(--light-cyan);
+   }
+   .subscription__description {
+      color: var(--very-light-cyan);
+      font-size: .75em;
+      padding: .75em 0;
+   }
+   .button__container {
+      flex-grow: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: .75em 0;
+   }
+   .subscription__button {
+      background-color: var(--bright-yellow);
+      color:var(--white);
+      width: 100%;
+      padding: 1.2em 0;
+      border: none;
+      border-radius: 0.5em;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      transition-duration: .3s;
+   }
+   .subscription__button:hover {
+      background-color: var(--white);
+      color: var(--bright-yellow);
+   }
+   /*
+      WHYUS SECTION
+   */
+   .why-us__section{
+      background-color: var(--light-cyan);
+      padding: .75em 1.5em;
+      border-radius: 0 0 0.5em 0.5em;
+   }
+   .why-us__section ul {
+      list-style: none;
+   }
+   .why-us__section ul li {
+      color: var(--very-light-cyan);
+      font-size: .75em;
+      padding: .3em 0;
+      transition-duration: .3s;
+      cursor: pointer;
+   }
+   .why-us__section ul li:hover {
+      color: var(--white);
+   }
+/* 
+   FOOTER SECTION
+*/
+
+.author__section{
+   position: fixed;
+   bottom: 0;
+   padding-bottom: 15px;
+   z-index: 1;
+   width: 100%;
+   text-align: center;
+}
+.author__section > * {
+   color: var(--white);
+   font-weight: 500;
+}
+.author__section > .author__spacer {
+   margin: 0 4px 0 4px;
+}
+.author__section, a {
+   text-decoration: none;
+   transition: .3s ease-out;
+}
+.author__section > .author__anchor:hover {
+   color: var(--soft-magenta);
+}
+
+@media (min-width: 40em){
+   .main__container {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      max-width: 50%;
+   }
+   .join__section {
+      padding: .75em 2em;
+      grid-column-start: 1;
+      grid-column-end: 3;
+   }
+   .description {
+      font-size: .9em;
+   }
+   .section__title {
+      font-size: 1.3em;
+   }
+   .subscription__section {
+      padding: .75em 2em;
+      border-radius: 0 0 0 .5em;
+   }
+   .subscription__description {
+      font-size: .9em;
+   }
+   .why-us__section {
+      padding: .75em 2em;
+      border-radius: 0 0 .5em 0;
+   }
+   .why-us__section ul li {
+      font-size: .9em;
+      padding: .15em 0;
+   }
+
+}
