@@ -169,7 +169,7 @@ body {
    text-align: center;
 }
 .author__section > * {
-   color: var(--white);
+   color: var(--cyan);
    font-weight: 500;
 }
 .author__section > .author__spacer {
@@ -180,7 +180,7 @@ body {
    transition: .3s ease-out;
 }
 .author__section > .author__anchor:hover {
-   color: var(--soft-magenta);
+   color: var(--bright-yellow);
 }
 
 @media (min-width: 40em){
